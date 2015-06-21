@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="WinpTik" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_32_bits" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Projeto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_x32" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/" />
+					<Add directory="bibliotecas/terceiros/winpcap/pcap" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="/" />
+					<Add directory="bibliotecas/terceiros/winpcap/pcap" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="Shlwapi" />
+					<Add library="Ws2_32" />
+					<Add library="libraries\the3rd\winpcap\libpacket.a" />
+					<Add library="libraries\the3rd\winpcap\libwpcap.a" />
+					<Add library="libraries\the3rd\winpcap\Packet.lib" />
+					<Add library="libraries\the3rd\winpcap\wpcap.lib" />
+					<Add directory="/" />
+					<Add directory="bibliotecas/terceiros/winpcap/pcap" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Projeto" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_x32" />
+				<Linker>
+					<Add option="-s" />
+					<Add library="Shlwapi" />
+					<Add library="Ws2_32" />
+					<Add library="libraries\the3rd\winpcap\libpacket.a" />
+					<Add library="libraries\the3rd\winpcap\libwpcap.a" />
+					<Add library="libraries\the3rd\winpcap\Packet.lib" />
+					<Add library="libraries\the3rd\winpcap\wpcap.lib" />
+				</Linker>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="Wininet" />
+			<Add library="shlwapi" />
+		</Linker>
+		<Unit filename="libraries/copyright/Node.hpp" />
+		<Unit filename="libraries/copyright/Router.hpp" />
+		<Unit filename="libraries/copyright/Utilities.hpp" />
+		<Unit filename="libraries/copyright/datagrams/ARP.hpp" />
+		<Unit filename="libraries/copyright/datagrams/Ethernet.hpp" />
+		<Unit filename="libraries/copyright/datagrams/ICMP.hpp" />
+		<Unit filename="libraries/copyright/datagrams/IPv4.hpp" />
+		<Unit filename="libraries/copyright/datagrams/TCP.hpp" />
+		<Unit filename="libraries/copyright/datagrams/UDP.hpp" />
+		<Unit filename="libraries/the3rd/winpcap/Packet32.h" />
+		<Unit filename="libraries/the3rd/winpcap/Win32-Extensions.h" />
+		<Unit filename="libraries/the3rd/winpcap/bittypes.h" />
+		<Unit filename="libraries/the3rd/winpcap/ip6_misc.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap-bpf.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap-namedb.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap-stdinc.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/bluetooth.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/bpf.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/namedb.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/pcap.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/sll.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/usb.h" />
+		<Unit filename="libraries/the3rd/winpcap/pcap/vlan.h" />
+		<Unit filename="libraries/the3rd/winpcap/remote-ext.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
